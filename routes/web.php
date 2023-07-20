@@ -6,9 +6,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PagesController::class, 'index']);
 #Route::resource('/blog' PostsController::class);
 
-Route::get('/register', [RegistrationController::class, 'create']);
-Route::post('/register', [RegistrationController::class, 'store']);
+Route::get('/register', 'App\Http\Controllers\RegistrationController@create');
+Route::post('/register', 'App\Http\Controllers\RegistrationController@store');
 
-Route::get('/login', [SessionsController::class, 'create']);
-Route::post('/login', [SessionsController::class, 'store']);
-Route::get('/logout', [SessionsController::class, 'destroy']);
+Route::get('/login', 'App\Http\Controllers\SessionsController@create');
+Route::post('/login', 'App\Http\Controllers\SessionsController@store');
+Route::get('/logout', 'App\Http\Controllers\SessionsController@destroy');

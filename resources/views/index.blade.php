@@ -7,22 +7,22 @@
 
             <ul>
                 <li>
-                    <a href="/">
+                    <a href="/BlogTask/public/">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="/blog">
+                    <a href="/BlogTask/public/blog">
                         Blogs
                     </a>
                 </li>
                 <li>
-                    <a href="/login">
+                    <a href="/BlogTask/public/login">
                         Login
                     </a>
                 </li>
                 <li>
-                    <a href="/register">
+                    <a href="/BlogTask/public/register">
                         Register
                     </a>
                 </li>
