@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('posts_for_hosts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('slug');
             $table->string('title');
             $table->longText('description');
             $table->string('image_path');
             $table->timestamps();
-            $table->unsignedBigInteger('user_id')
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
