@@ -21,6 +21,6 @@ class RegistrationController extends Controller
 
         auth()->login($user);
 
-        return redirect()->to('/blog');
+        return redirect()->to('/BlogTask/public/blog');
     }
 }
