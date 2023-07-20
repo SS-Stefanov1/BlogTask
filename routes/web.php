@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -11,8 +12,14 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
+ */
 
+Route::get('/', [PagesController::class, 'index']);
+#Route::resource('/blog' PostsController::class);
+
+/*
 Route::get('/', function () {
-    return view('welcome');
+return view('welcome');
 });
+
+ */
