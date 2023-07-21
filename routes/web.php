@@ -3,8 +3,10 @@
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
+#Route::resource('/blog', PostsController::class);
+
 Route::get('/', [PagesController::class, 'index']);
-Route::resource('/blog', PostsController::class);
+Route::get('/blog', [\App\Http\Controllers\PostsController::class, 'index']);
 
 Route::get('/register', 'App\Http\Controllers\RegistrationController@create');
 Route::post('/register', 'App\Http\Controllers\RegistrationController@store');

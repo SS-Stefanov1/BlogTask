@@ -2,63 +2,50 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // show all blog posts
     public function index()
     {
         return view('blog.index')->with('posts', Post::orderBy('updated_at', 'DESC')->get());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    // show form to create a blog post
     public function create()
     {
-        //
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    // store a new post
     public function store(Request $request)
     {
-        //
+
     }
 
-    /**
-     * Display the specified resource.
-     */
+    // show a blog post
     public function show(string $id)
     {
-        //
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    // show form to edit the post
     public function edit(string $id)
     {
-        //
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    // save the edited post
     public function update(Request $request, string $id)
     {
-        //
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    // delete a post
     public function destroy(string $id)
     {
-        //
+
     }
 }
