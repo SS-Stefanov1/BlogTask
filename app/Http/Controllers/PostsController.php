@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\BlogPost;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -10,7 +10,10 @@ class PostsController extends Controller
     // show all blog posts
     public function index()
     {
-        return view('blog.index')->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+        #return view('blog.index')->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+
+        $posts = BlogPost::all();
+        return $posts;
     }
 
     // show form to create a blog post
@@ -26,9 +29,9 @@ class PostsController extends Controller
     }
 
     // show a blog post
-    public function show(string $id)
+    public function show(BlogPost $blogPost)
     {
-
+        return $blogPost;
     }
 
     // show form to edit the post
