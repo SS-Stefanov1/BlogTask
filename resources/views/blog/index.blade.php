@@ -1,93 +1,28 @@
-<footer>
-    <div>
-        <div>
-            <h3>
-                Pages
-            </h3>
+@extends('layouts.master')
+@section('content')
 
-            <ul>
-                <li>
-                    <a href="/BlogTask/public/">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="/BlogTask/public/blog_main">
-                        Blog Posts
-                    </a>
-                </li>
-                <li>
-                    <a href="/BlogTask/public/register">
-                        Register
-                    </a>
-                </li>
-                <li>
-                    <a href="/BlogTask/public/login">
-                        Login
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>
-                More Information
-            </h3>
-
-            <ul>
-                <li>
-                    <a href="/">
-                        The Team
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        Headquarters
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        About us
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>
-                Latest blogs
-            </h3>
-
-            <ul>
-                <li>
-                    <a href="/">
-                        Not all cookies are made the same
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        Software Engineering is awesome
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        How to learn laravel in 5 steps
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        PHP is the best language because..
-                    </a>
-                </li>
-            </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 pt-2">
+                 <div class="row">
+                    <div class="col-8">
+                        <h1 class="display-one">Our Blog!</h1>
+                        <p>Enjoy reading our posts. Click on a post to read!</p>
+                    </div>
+                    <div class="col-4">
+                        <p>Create new Post</p>
+                        <a href="/blog/create/post" class="btn btn-primary btn-sm">Add Post</a>
+                    </div>
+                </div>
+                @forelse($posts as $post)
+                    <ul>
+                        <li><a href="./blog/{{ $post->id }}">{{ ucfirst($post->title) }}</a></li>
+                    </ul>
+                @empty
+                    <p class="text-warning">No blog Posts available</p>
+                @endforelse
+            </div>
         </div>
     </div>
-    <p>
-        Copyright 1994-2023 S.S.
-    </p>
-</footer>
+
+@endsection

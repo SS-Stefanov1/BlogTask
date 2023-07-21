@@ -7,13 +7,13 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
-    // show all blog posts
+    // show posts
     public function index()
     {
         #return view('blog.index')->with('posts', Post::orderBy('updated_at', 'DESC')->get());
 
         $posts = BlogPost::all();
-        return $posts;
+        return view('blog.index', ['posts' => $posts]);
     }
 
     // show form to create a blog post

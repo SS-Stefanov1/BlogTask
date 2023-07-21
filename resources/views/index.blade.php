@@ -12,7 +12,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/BlogTask/public/blog">
+                    <a href="/BlogTask/public/blog_main">
                         Blog Posts
                     </a>
                 </li>
