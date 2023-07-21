@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Blog Posts</title>
+    <title>{{ config('app.name') }}</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/sticky-footer.css" rel="stylesheet">
 </head>
