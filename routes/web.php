@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\PagesController::class, 'index']);
 
 // Blog Page
-Route::get('/blog_main', function () {return view('welcome');});
+#Route::get('/blog_main', function () {return view('welcome');});
 Route::get('/blog', [\App\Http\Controllers\PostsController::class, 'index']);
 Route::get('/blog/{blogPost}', [\App\Http\Controllers\PostsController::class, 'show']);
 
