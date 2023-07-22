@@ -10,8 +10,10 @@ class PostsController extends Controller
     // show posts
     public function index()
     {
-        $posts = BlogPost::all();
-        return view('blog.index', ['posts' => $posts]);
+        $posts = BlogPost::orderBy('created_at', 'DESC')->take(12)->paginate(10);
+        return view('blog.index', [
+            'posts' => $posts,
+        ]);
     }
 
     // show form to create a blog post

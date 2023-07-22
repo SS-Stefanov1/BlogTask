@@ -21,6 +21,8 @@
                     <p class="text-warning">No blog Posts available</p>
                 @endforelse
             </div>
+
+            <div> {{ $posts->links() }} </div>
         </div>
     </div>
 

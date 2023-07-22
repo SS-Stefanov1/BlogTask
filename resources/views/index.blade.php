@@ -36,22 +36,22 @@
 
             <ul>
                 <li>
-                    <a href="/">
+                    <a href="./team">
                         The Team
                     </a>
                 </li>
                 <li>
-                    <a href="/">
+                    <a href="./hq">
                         Headquarters
                     </a>
                 </li>
                 <li>
-                    <a href="/">
+                    <a href="./about">
                         About us
                     </a>
                 </li>
                 <li>
-                    <a href="/">
+                    <a href="./contact">
                         Contact
                     </a>
                 </li>

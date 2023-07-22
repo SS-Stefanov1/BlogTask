@@ -8,6 +8,7 @@
                 <h1 class="display-one">{{ ucfirst($post->title) }}</h1>
                 <p>{{ ucfirst($post->description) }}</p>
                 <img src="{{ ucfirst($post->image_path) }}" alt="BlogImage" width="300" height="150">
+                                <p>{{ ucfirst($post->created_at) }}</p>
                 <p>{!! $post->body !!}</p>
                 <hr>
                 <a href="./{{ $post->id }}/edit" class="btn btn-outline-primary">Edit Post</a>
