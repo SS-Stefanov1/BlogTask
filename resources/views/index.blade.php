@@ -36,16 +36,6 @@
 
             <ul>
                 <li>
-                    <a href="./team">
-                        The Team
-                    </a>
-                </li>
-                <li>
-                    <a href="./hq">
-                        Headquarters
-                    </a>
-                </li>
-                <li>
                     <a href="./about">
                         About us
                     </a>
@@ -60,31 +50,20 @@
 
         <div>
             <h3>
-                Latest blogs
+                Latest Posts
             </h3>
 
-            <ul>
-                <li>
-                    <a href="/">
-                        Not all cookies are made the same
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        Software Engineering is awesome
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        How to learn laravel in 5 steps
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        PHP is the best language because..
-                    </a>
-                </li>
-            </ul>
+
+                    <div class="col-8">
+
+                @forelse($posts as $post)
+                    <ul>
+                        <li><a href="./blog/{{ $post->id }}">{{ ucfirst($post->title) }}</a></li>
+                    </ul>
+                @empty
+                    <p class="text-warning">No blog Posts available</p>
+                @endforelse
+</div>
         </div>
     </div>
     <p>

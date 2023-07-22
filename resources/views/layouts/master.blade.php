@@ -4,11 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ config('app.name') }}</title>
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/sticky-footer.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ URL::asset('style.css') }}">
 </head>
 
-<body>
+<body class="test">
 
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -20,7 +19,7 @@
     </div>
 </nav>
 
-<div class="container">
+<div class="container" class="test">
     @yield('content')
 </div>
 

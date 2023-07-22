@@ -2,7 +2,14 @@
 @section('content')
 
 <h2>Register</h2>
-<form method="POST" action="/register">
+<form method="POST" action="./register">
+	@csrf <!-- {{ csrf_field() }} -->
+
+	<div class="form-group">
+		<label for="username">Username:</label>
+		<input type="text" class="form-control" id="username" name="username">
+	</div>
+
 	<div class="form-group">
 		<label for="name">Name:</label>
 		<input type="text" class="form-control" id="name" name="name">
