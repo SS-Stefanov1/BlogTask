@@ -15,6 +15,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="/BlogTask/public/">Return to Home Page</a>
             </li>
+            <p>@if( auth()->check() )
+
+            Logged as <a class="nav-link" href="#">{{ auth()->user()->name }}</a>!
+            <li class="nav-item">
+                <a class="nav-link" href="./logout">Log Out</a>
+            </li>
+            @else
+<p>You're not logged in.</p>
+            @endif</p>
         </ul>
     </div>
 </nav>
