@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ config('app.name') }}</title>
-    <link type="text/css" rel="stylesheet" href="{{ URL::asset('style.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
 </head>
 
 <body class="test">

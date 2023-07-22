@@ -22,8 +22,8 @@ Route::put('/blog/{blogPost}/edit', [\App\Http\Controllers\PostsController::clas
 Route::delete('/blog/{blogPost}', [\App\Http\Controllers\PostsController::class, 'destroy']);
 
 // Register
-Route::get('/register', 'App\Http\Controllers\RegistrationController@show');
-Route::post('/register', 'App\Http\Controllers\RegistrationController@register');
+Route::get('/register', 'App\Http\Controllers\RegistrationController@create');
+Route::post('/register', 'App\Http\Controllers\RegistrationController@store');
 
 // Session
 Route::get('/login', 'App\Http\Controllers\SessionsController@create');

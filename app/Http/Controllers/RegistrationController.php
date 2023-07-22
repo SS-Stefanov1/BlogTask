@@ -2,46 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requets\RegistrationRequest;
-use App\Models\User;
+use App\User;
 use Illuminate\Http\Request;
 
 class RegistrationController extends Controller
 {
-
-    /**
-     * Display register page.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
-    public function show()
+    public function create()
     {
         return view('registration.create');
     }
 
-    /**
-     * Handle account registration request
-     *
-     * @param RegisterRequest $request
-     *
-     * @return \Illuminate\Http\Response
-     */
-
-    public function register(RegistrationRequest $request)
+    public function store()
     {
+        $this->validate(request(), [
+            'username' => 'required',
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
 
-/*
-$this->validate(request(), [
-'name' => 'required',
-'email' => 'required|email',
-'password' => 'required',
-]);
- */
-        $user = User::create($request->validated());
-
+        $user = User::create(request(['username', 'name', 'email', 'password']));
         auth()->login($user);
 
-        return redirect('./')->with('success', "Account successfully registered.");
+        return redirect()->to('./');
     }
 }

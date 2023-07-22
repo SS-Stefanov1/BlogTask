@@ -3,7 +3,7 @@
 
 <h2>Register</h2>
 <form method="POST" action="./register">
-	@csrf <!-- {{ csrf_field() }} -->
+	{{ csrf_field() }}
 
 	<div class="form-group">
 		<label for="username">Username:</label>
