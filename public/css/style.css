@@ -1,8 +1,79 @@
-.test {
-  padding-top: 45px;
-  /*background-color: #eb4034 !important;*/
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 0px;
-  line-height: 1.5em;
+.test_blue {
+  background-color: #0b03fc !important;
 }
 
+.test_green {
+  background-color: #03fc28 !important;
+}
+
+.test_yellow {
+  background-color: #f4fc03 !important;
+}
+
+.test_purple {
+  background-color: #ad03fc !important;
+}
+
+
+
+
+
+
+
+a {
+  text-decoration: none !important;
+}
+
+
+.bg {
+  background-image: linear-gradient(to bottom, #87bce0, #b6d1e3);
+}
+
+
+.footer {
+  background-color: #3e505c !important;
+  text-align: center !important;
+  vertical-align: center !important;
+  padding-top: 15px;
+  margin-top: 35px;
+  height: 30px;
+}
+
+
+.mid_align {
+  text-align: left !important;
+}
+
+
+.blogs {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: Palatino, serif;
+  width: 1000px;
+  margin-left: 25%;
+  padding-top: 25px;
+  background-image: linear-gradient(to bottom, #87bce0, #b6d1e3);
+  text-align: center;
+}
+
+
+.blogs_inner {
+  border-style: ridge;
+  border: 1px ridged gray;
+}
+
+
+.menu {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: Palatino, serif;
+  float: left;
+  text-align: left;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.menu a {
+  padding-left: 10px;
+  padding-right: 10px;
+}

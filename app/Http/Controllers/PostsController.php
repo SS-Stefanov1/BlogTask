@@ -30,7 +30,7 @@ class PostsController extends Controller
             'title' => $request->input('title'),
             'description' => $request->input('body'),
             'slug' => "post-",
-            'image_path' => "https://img.freepik.com/premium-vector/system-software-update-upgrade-concept-loading-process-screen-vector-illustration_175838-2182.jpg?w=2000",
+            'image_path' => $request->input('image_path'),
         ]);
 
         return redirect('blog/' . $newPost->id);

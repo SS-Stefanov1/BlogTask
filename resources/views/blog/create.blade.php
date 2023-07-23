@@ -19,10 +19,17 @@
                                 <input type="text" id="title" class="form-control" name="title"
                                        placeholder="Enter Post Title" required>
                             </div>
+
                             <div class="control-group col-12 mt-2">
                                 <label for="body">Post Body</label>
                                 <textarea id="body" class="form-control" name="body" placeholder="Enter Post Body"
                                           rows="" required></textarea>
+                            </div>
+
+                                                        <div class="control-group col-12 mt-2">
+                                <label for="image_path">Post Image</label>
+                                <input id="image_path" class="form-control" name="image_path" placeholder="Enter Path to Image"
+                                          rows="" required></input>
                             </div>
                         </div>
                         <div class="row mt-2">

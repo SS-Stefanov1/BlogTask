@@ -7,33 +7,33 @@
     <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
 </head>
 
-<body class="test">
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/BlogTask/public/">Return to Home Page</a>
+                </li>
+                <p>
+                @if( auth()->check() )
+                Logged as <a class="nav-link" href="#">{{ auth()->user()->name }}</a>!
+                <li class="nav-item">
+                    <a class="nav-link" href="./logout">Log Out</a>
+                </li>
+                @else
+                    <p>You're not logged in.</p>
+                @endif
+                </p>
+            </ul>
+        </div>
+    </nav>
 
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/BlogTask/public/">Return to Home Page</a>
-            </li>
-            <p>@if( auth()->check() )
-
-            Logged as <a class="nav-link" href="#">{{ auth()->user()->name }}</a>!
-            <li class="nav-item">
-                <a class="nav-link" href="./logout">Log Out</a>
-            </li>
-            @else
-<p>You're not logged in.</p>
-            @endif</p>
-        </ul>
+    <div class="container" class="blue">
+        @yield('content')
     </div>
-</nav>
 
-<div class="container" class="test">
-    @yield('content')
-</div>
-
-<script src="/js/jquery-3.1.1.slim.min.js"></script>
-<script src="/js/tether.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.1.1.slim.min.js"></script>
+    <script src="/js/tether.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 @extends('layouts.master')
 @section('content')
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 pt-2">
+    <div>
+        <div>
+            <div>
 <h1>Meet John Smith: Empowering the Future through Technology</h1>
 <br/><br/>
 <p>As the CEO of a leading IT firm, John Smith is at the forefront of revolutionizing the digital landscape. With a passion for innovation and an unwavering commitment to excellence, John has built an impressive career as a visionary leader in the tech industry.
